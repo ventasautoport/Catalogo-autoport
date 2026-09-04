@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Acceso administrador | AUTOPORT</title><link rel="stylesheet" href="style.css">
+</head>
+<body class="login-page">
+<div class="login-card">
+  <img src="assets/logo.svg" class="login-logo" alt="AUTOPORT">
+  <span class="eyebrow">PANEL PRIVADO</span>
+  <h1>Iniciar sesión</h1>
+  <p>Solo el administrador autorizado puede modificar el catálogo.</p>
+  <form id="loginForm">
+    <label>Correo electrónico<input id="email" type="email" autocomplete="username" required></label>
+    <label>Contraseña<input id="password" type="password" autocomplete="current-password" required></label>
+    <button class="btn primary full" type="submit">Ingresar</button>
+    <div id="loginError" class="error"></div>
+  </form>
+  <a href="index.html">← Volver al catálogo</a>
+</div>
+<script type="module" src="auth.js"></script>
+</body>
+</html>

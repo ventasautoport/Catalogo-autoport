@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Administrador | AUTOPORT</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="admin-top">
+  <div><img src="assets/logo.svg" alt="AUTOPORT"><strong>Panel de administración</strong></div>
+  <div><span id="userEmail"></span><button id="logout" class="btn small">Cerrar sesión</button></div>
+</header>
+<main class="admin-wrap">
+  <div id="loading">Comprobando acceso…</div>
+  <section id="adminApp" hidden>
+    <div class="admin-head"><div><span class="eyebrow">SOLO ADMIN</span><h1>Editar catálogo</h1><p>Los cambios se guardan online en Firebase y aparecen en el catálogo público.</p></div><button id="saveAll" class="btn primary">Guardar cambios</button></div>
+
+    <div class="admin-grid">
+      <section class="panel">
+        <h2>Marca y contacto</h2>
+        <label>Nombre<input id="siteName"></label>
+        <label>Título principal<input id="headline"></label>
+        <label>Descripción<textarea id="description"></textarea></label>
+        <label>WhatsApp<input id="whatsapp"></label>
+        <label>Teléfono<input id="phone"></label>
+        <label>Dirección<input id="address"></label>
+      </section>
+
+      <section class="panel">
+        <h2>Diseño</h2>
+        <label>Color principal<input id="primaryColor" type="color"></label>
+        <label>Color oscuro<input id="darkColor" type="color"></label>
+        <label>URL foto portada<input id="heroImage"></label>
+        <p class="hint">Podés usar una URL de imagen. En la guía se explica cómo habilitar subida de fotos a Storage.</p>
+      </section>
+    </div>
+
+    <section class="panel">
+      <div class="row-between"><div><h2>Productos</h2><p class="hint">Las Tablillas ahora son una sección independiente de Persianas.</p></div><button id="addProduct" class="btn">+ Agregar producto</button></div>
+      <div id="productsEditor"></div>
+    </section>
+  </section>
+</main>
+<script type="module" src="admin.js"></script>
+</body>
+</html>
